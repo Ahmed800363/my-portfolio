@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmed Ramadan Portfolio</title>
+
+<!-- خط احترافي -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0f172a;
+color:white;
+line-height:1.6;
+scroll-behavior:smooth;
+}
+
+/* Navigation */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#020617;
+padding:15px;
+text-align:center;
+z-index:1000;
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+/* Sections */
+section{
+padding:100px 20px;
+max-width:1100px;
+margin:auto;
+opacity:0;
+transform:translateY(50px);
+transition:all 1s ease;
+}
+
+/* Animate visible sections */
+section.visible{
+opacity:1;
+transform:translateY(0);
+}
+
+/* Section titles */
+h2.section-title{
+margin-bottom:40px;
+font-size:32px;
+text-align:center;
+color:#38bdf8;
+}
+
+/* Cover */
+.cover{
+display:flex;
+align-items:center;
+justify-content:space-between;
+min-height:100vh;
+flex-wrap:wrap;
+}
+
+.cover-text{
+max-width:500px;
+}
+
+.cover h1{
+font-size:50px;
+margin-bottom:10px;
+}
+
+.cover h2{
+color:#38bdf8;
+margin-bottom:20px;
+}
+
+.cover img{
+width:350px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* About */
+.about-container{
+display:flex;
+align-items:center;
+gap:50px;
+flex-wrap:wrap;
+margin-top:50px;
+}
+
+.about-image img{
+width:350px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.about-text{
+flex:1;
+}
+
+.about-text p{
+margin-bottom:15px;
+line-height:1.7;
+}
+
+/* Grid */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+/* Cards */
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Skills */
+.skills-container{
+max-width:600px;
+margin:auto;
+}
+
+.skill{
+margin-bottom:20px;
+}
+
+.skill-name{
+margin-bottom:5px;
+}
+
+.skill-bar{
+width:100%;
+height:20px;
+background:#1e293b;
+border-radius:10px;
+overflow:hidden;
+}
+
+.skill-bar-fill{
+height:100%;
+width:0;
+background:#38bdf8;
+border-radius:10px;
+transition:width 2s ease;
+}
+
+/* Buttons */
+.button{
+display:inline-block;
+margin-top:10px;
+padding:10px 20px;
+background:#38bdf8;
+color:black;
+text-decoration:none;
+border-radius:5px;
+font-weight:600;
+transition:0.3s;
+}
+
+.button:hover{
+background:white;
+}
+
+/* CTA */
+.cta{
+text-align:center;
+background:#020617;
+padding:60px 20px;
+border-radius:10px;
+}
+
+/* Contact */
+.contact{
+text-align:center;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+margin-top:50px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#achievements">Achievements</a>
+<a href="#links">Links</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<!-- Cover -->
+<section class="cover visible">
+<div class="cover-text">
+<h1>Ahmed Ramadan</h1>
+<h2>Data Engineer & Data Analyst</h2>
+<p>Building ETL pipelines and transforming raw data into valuable insights.</p>
+<a class="button" href="#projects">View My Work</a>
+</div>
+<img src="20241023_193321.jpg">
+</section>
+
+<!-- About -->
+<section id="about" class="visible">
+<h2 class="section-title">About</h2>
+<div class="about-container">
+<div class="about-image">
+<img src="profile.jpg">
+</div>
+<div class="about-text">
+<p>
+I am a Data Engineer and Data Analyst from Egypt with strong experience in Python, SQL, and ETL pipelines.
+</p>
+<p>
+My unique strength is combining data engineering and data analysis skills. I build reliable data pipelines and transform raw data into meaningful insights that help businesses make better decisions.
+</p>
+</div>
+</div>
+</section>
+
+<!-- Education -->
+<section id="education">
+<h2 class="section-title">Education</h2>
+<div class="card">
+<h3>Bachelor in Computer Science</h3>
+<p>Focus on Databases, Data Analysis and Data Engineering.</p>
+</div>
+</section>
+
+<!-- Skills -->
+<!-- Skills -->
+<section id="skills">
+<h2 class="section-title">Skills</h2>
+<div class="skills-container">
+
+<div class="skill">
+<div class="skill-name">Python</div>
+<div class="skill-bar"><div class="skill-bar-fill" data-width="90%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">SQL</div>
+<div class="skill-bar"><div class="skill-bar-fill" data-width="85%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Power BI</div>
+<div class="skill-bar"><div class="skill-bar-fill" data-width="80%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">SSIS</div>
+<div class="skill-bar"><div class="skill-bar-fill" data-width="75%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Hadoop</div>
+<div class="skill-bar"><div class="skill-bar-fill" data-width="70%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Spark</div>
+<div class="skill-bar"><div class="skill-bar-fill" data-width="70%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">MongoDB</div>
+<div class="skill-bar"><div class="skill-bar-fill" data-width="75%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Data Warehousing (DWH)</div>
+<div class="skill-bar"><div class="skill-bar-fill" data-width="70%"></div></div>
+</div>
+
+</div>
+</section>
+
+<!-- Experience -->
+<!-- Work Experience -->
+<section id="experience">
+<h2 class="section-title">Work Experience</h2>
+
+<div class="card">
+<h3>Data Engineer at Digital Egypt Pioneers Initiative(DEPI)</h3>
+<p>
+Worked on building ETL pipelines, managing data workflows, and processing datasets
+for analytics projects. Developed dashboards and automated reporting.
+</p>
+<p>
+You can view some of my work here: 
+<a class="button" href="https://www.linkedin.com/in/ahmed-ramadan-ismail/details/experience/?locale=en" target="_blank">LinkedIn Project</a>
+</p>
+</div>
+
+</section>
+
+<!-- Projects -->
+<section id="projects">
+<h2 class="section-title">Projects</h2>
+<div class="grid">
+<div class="card">
+<h3>SSIS ETL Project</h3>
+<p>ETL pipeline extracting data from SQL Server, transforming it using SSIS and loading it into a Data Warehouse.</p>
+<a class="button" href="https://github.com/Ahmed800363/Building-DWH-Using-SSIS" target="_blank">View Project</a>
+</div>
+<div class="card">
+<h3>Python ETL Pipeline</h3>
+<p>Python pipeline using Pandas to clean and process raw data before storing it in a database.</p>
+<a class="button" href="https://github.com/yourusername/project2" target="_blank">View Project</a>
+</div>
+<div class="card">
+<h3>Web Scraping Project</h3>
+<p>Built a web scraping pipeline using Python to extract data from websites,clean the data, and store it in a database for analysis..</p>
+<a class="button" href="https://mostaql.com/portfolio/1656486-web-scraping" target="_blank">View Project</a>
+</div>
+</div>
+</section>
+
+<!-- Achievements -->
+<section id="achievements">
+<h2 class="section-title">Achievements</h2>
+<div class="card">
+<p>Built multiple ETL pipelines using Python and SSIS.</p>
+<p>Created analytical dashboards using Power BI.</p>
+<p>Completed several Data Engineering projects.</p>
+</div>
+</section>
+
+<!-- Links -->
+<section id="links">
+<h2 class="section-title">Links</h2>
+<div class="grid">
+<div class="card">
+<h3>GitHub</h3>
+<a class="button" href="https://github.com/Ahmed800363" target="_blank">Open GitHub</a>
+</div>
+<div class="card">
+<h3>LinkedIn</h3>
+<a class="button" href="https://www.linkedin.com/in/ahmed-ramadan-ismail/" target="_blank">Open LinkedIn</a>
+</div>
+<div class="card">
+<h3>Khamsat</h3>
+<a class="button" href="https://khamsat.com/user/ramadana7med" target="_blank">Visit Khamsat</a>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<h2>Let's Work Together</h2>
+<p>If you need help with Data Engineering or Data Analysis.</p>
+<a class="button" href="#contact">Hire Me</a>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+<h2 class="section-title">Contact</h2>
+<p>Email: 
+<a class="button" href="mailto:ahmedramadan365.5@gmail.com">Send Email</a>
+</p>
+</section>
+
+<footer>
+<p>© 2026 Ahmed Ramadan</p>
+</footer>
+
+<script>
+// Scroll animations
+const sections = document.querySelectorAll("section");
+window.addEventListener("scroll", checkSections);
+
+function checkSections(){
+sections.forEach(sec=>{
+let secTop = sec.getBoundingClientRect().top;
+let trigger = window.innerHeight - 100;
+if(secTop < trigger){
+sec.classList.add("visible");
+}
+});
+}
+
+// Skills bars animation
+const skillFills = document.querySelectorAll(".skill-bar-fill");
+window.addEventListener("scroll", ()=>{
+skillFills.forEach(fill=>{
+let parent = fill.parentElement.parentElement;
+let parentTop = parent.getBoundingClientRect().top;
+if(parentTop < window.innerHeight - 50){
+fill.style.width = fill.getAttribute("data-width");
+}
+});
+});
+</script>
+
+</body>
+</html>
